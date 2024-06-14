@@ -1,0 +1,18 @@
+{
+    "path_to_data": "data/DATA_MAIN",
+    "task": "4_class_covid",
+    "interpolate": true,
+    "batch_size": 4,
+    "model_type": "CNN_int",
+    "num_epochs": 70,
+    "code_word": "4_covid_all_70ep_allaug",
+    "path_to_save": "models",
+    "load_pretrained_model": false,
+    "pretrained_model_path": "path/to/pretrained/model",
+    "load_prepared_dataloaders": false,
+    "prepared_dataloader_paths": {
+        "train_loader": "path/to/train_loader.pkl",
+        "test_loader": "path/to/test_loader.pkl"
+    },
+    "pickle_dataloaders": true
+}
