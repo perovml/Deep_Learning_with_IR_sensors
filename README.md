@@ -1,56 +1,64 @@
-Privacy-Preserving Localization and Social Distance Monitoring with Low-Resolution Thermal Imaging
-This repository contains the implementation for the paper:
-"Privacy-Preserving Localization and Social Distance Monitoring with Low-Resolution Thermal Imaging and Deep Learning"
-by Andrei Perov and Jens Heger
-Available at: ScienceDirect
+# Privacy-Preserving Localization and Social Distance Monitoring with Low-Resolution Thermal Imaging
 
-Overview
+This repository contains the implementation for the paper:  
+**"Privacy-Preserving Localization and Social Distance Monitoring with Low-Resolution Thermal Imaging and Deep Learning"**  
+by *Andrei Perov* and *Jens Heger*  
+📄 [Read the paper on ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2212827124012575)
+
+---
+
+## 🧠 Overview
+
 This study introduces a novel approach to leveraging low-power, low-resolution infrared (IR) sensors for detailed multi-person tracking in manufacturing environments. We curated a dataset capturing a wide range of human interactions, annotated for two key tasks:
 
-Multiple-person localization
+- **Multiple-person localization**
+- **Social distance violation detection**
 
-Social distance violation detection
+Our method combines **convolutional** and **recurrent neural networks** to process spatiotemporal data. Key results:
 
-Our method combines convolutional and recurrent neural networks to process spatiotemporal data. Notably:
+- ✅ **97.5% image-level accuracy** in human localization using a novel segmentation-based approach  
+- 📏 **91% macro-averaged accuracy** in a 4-class social distance classification task  
 
-We achieve 97.5% image-level accuracy in human localization using a novel segmentation-based approach.
+This highlights the importance of **interpolation methods** and **convolutional kernel selection** for effective social distance modeling.
 
-We reach 91% macro-averaged accuracy in a four-class social distance violation classification task, emphasizing the importance of interpolation and kernel selection in model design.
+---
 
-Dataset
-The Low-Resolution Infrared Sensor Dataset and supporting pipeline are available on Kaggle:
-🔗 https://www.kaggle.com/datasets/andreyperov/lowresir-detect-and-distance
+## 📂 Dataset
 
-A sample of this dataset is included in the repository under the data_IR_final folder.
+The **Low-Resolution Infrared Sensor Dataset** and supporting pipeline are publicly available on Kaggle:
 
-Repository Structure
-Python_Files/
-Full_pipeline_demonstration.ipynb
-Full training and evaluation pipeline for both multi-person localization (spatiotemporal task) and social distance estimation.
+👉 [LowResIR Dataset on Kaggle](https://www.kaggle.com/datasets/andreyperov/lowresir-detect-and-distance)
 
-GRAD_CAM.ipynb
-Visualization of the social distance model using Grad-CAM for CNN explainability.
+A small sample of the dataset is included in this repository under the `data_IR_final/` directory.
 
-architectures.py
-Contains all deep learning model architectures for both tasks.
+---
 
-baseline_algorithm.py
-A non-deep learning baseline approach for comparison.
+## 📁 Repository Structure
 
-data_formatting.py
-Functions for preprocessing and structuring the data for model input.
+### `Python_Files/`
 
-training.py
-Utilities for training the deep learning models.
+| File | Description |
+|------|-------------|
+| `Full_pipeline_demonstration.ipynb` | Full training and evaluation pipeline for both multi-person localization (spatiotemporal task) and social distance estimation |
+| `GRAD_CAM.ipynb` | Visualization of the social distance model using Grad-CAM (CNN explainability) |
+| `architectures.py` | Deep learning architectures for localization and social distance models |
+| `baseline_algorithm.py` | Non-deep learning baseline approach |
+| `data_formatting.py` | Data preprocessing and formatting utilities |
+| `training.py` | Training loop and optimization utilities |
+| `evaluation.py` | Model evaluation functions and metrics |
+| `grad_cam.py` | Grad-CAM visualization implementation |
+| `main.py` | Main script to run the full pipeline |
+| `config.json` | Configuration file for pipeline execution |
 
-evaluation.py
-Evaluation metrics and functions for model performance analysis.
+---
 
-grad_cam.py
-Implementation of Grad-CAM visualization.
+## 📌 Notes
 
-main.py
-Main execution script for running the complete pipeline.
+- For full dataset access, please download from the [Kaggle link](https://www.kaggle.com/datasets/andreyperov/lowresir-detect-and-distance).
+- The models and scripts are designed for reproducibility and extension for further research.
 
-config.json
-Configuration file for main.py execution settings.
+---
+
+## 📬 Contact
+
+For questions or collaborations, feel free to open an issue or contact the authors via the paper link above.
