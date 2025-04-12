@@ -61,4 +61,4 @@ A small sample of the dataset is included in this repository under the `data_IR_
 
 ## 📬 Contact
 
-For questions or collaborations, feel free to open an issue or contact the authors via the paper link above.
+For questions or collaborations, feel free to open an issue or contact the authors via perovandrey90@gmail.com.
